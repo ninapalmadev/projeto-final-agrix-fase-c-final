@@ -9,6 +9,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,6 +50,7 @@ public class FertilizerController {
    * @return all fertilizers
    */
   @GetMapping
+  @Secured("ROLE_ADMIN")
   public List<FertilizerDto> getAllFertilizers() {
     List<Fertilizer> allFertilizers = fertilizerService.getAll();
 
