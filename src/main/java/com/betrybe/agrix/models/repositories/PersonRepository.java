@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.repository;
+package com.betrybe.agrix.models.repositories;
 
 import com.betrybe.agrix.models.entities.Person;
 import java.util.Optional;

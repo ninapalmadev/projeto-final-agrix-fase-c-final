@@ -4,7 +4,7 @@ package com.betrybe.agrix.controllers;
 import com.betrybe.agrix.controllers.dto.CreatePersonDto;
 import com.betrybe.agrix.controllers.dto.PersonDto;
 import com.betrybe.agrix.models.entities.Person;
-import com.betrybe.agrix.ebytr.staff.service.PersonService;
+import com.betrybe.agrix.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +25,7 @@ public class PersonController {
     this.personService = personService;
   }
 
+  /** POST method. */
   @PostMapping
   public ResponseEntity<PersonDto> createPerson(@RequestBody CreatePersonDto createPersonDto) {
     Person person = personService.create(createPersonDto.toCreatePerson());

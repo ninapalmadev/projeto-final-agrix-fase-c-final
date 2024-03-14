@@ -1,7 +1,7 @@
 package com.betrybe.agrix.controllers.dto;
 
 import com.betrybe.agrix.models.entities.Person;
-import com.betrybe.agrix.ebytr.staff.security.Role;
+import com.betrybe.agrix.models.security.Role;
 
 /**
  * Create Person Dto.
